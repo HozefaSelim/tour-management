@@ -22,6 +22,7 @@
 .newsletter__input input {
   border: none;
   font-size: 1rem;
+  padding-left: 1rem;
   color: var(--heading-color);
 }
 .newsletter__input input:focus {
@@ -31,13 +32,31 @@
   width: 100%;
 }
 
-.newsletter__btn{
+.newsletter__btn {
   padding: 0.5rem 1.5rem !important;
   background: var(--secondary-color) !important;
   color: #fff !important;
   font-size: 1.1rem !important;
 }
 .newsletter__content p {
-    color: var(--heading-color);
-    font-size: 1.1rem;
+  color: var(--heading-color);
+  font-size: 1.1rem;
+}
+
+@media only screen and (max-width: 992px) {
+  .newsletter__content h2 {
+    font-size: 2rem;
+  }
+  .newsletter__img {
+    display: none;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .newsletter__content h2 {
+    font-size: 1.5rem;
+  }
+
+  .newsletter__content p {
+    display: none;
+  }
 }

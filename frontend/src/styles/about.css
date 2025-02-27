@@ -1,0 +1,97 @@
+/* AboutUs.css */
+.about-us {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.about-us__title {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-bottom: 20px;
+}
+
+.about-us__description {
+  font-size: 1.3rem;
+  color: var(--text-color);
+  line-height: 1.8rem;
+  margin-bottom: 40px;
+}
+
+.about-us__section-title {
+  font-size: 2.3rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.about-us__text {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  line-height: 1.8rem;
+}
+
+.about-us__list {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.about-us__list li {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.about-us__team {
+  text-align: center;
+}
+
+.about-us__team h3 {
+  font-size: 2.3rem;
+  color: var(--primary-color);
+}
+
+@media only screen and (max-width: 992px) {
+  .about-us__title {
+    font-size: 2.5rem;
+  }
+
+  .about-us__section-title {
+    font-size: 2rem;
+  }
+
+  .about-us__text {
+    font-size: 1.2rem;
+  }
+
+  .about-us__team {
+    margin-top: 2rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .about-us__title {
+    font-size: 2rem;
+  }
+
+  .about-us__section-title {
+    font-size: 1.8rem;
+  }
+
+  .about-us__text {
+    font-size: 1rem;
+  }
+}
+
+.about-us__section-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--secondary-color);
+}
+
+/* Optional: Add some margin for better spacing between text and images */
+.about-us__img {
+  margin-top: 20px;
+}

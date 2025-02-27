@@ -16,13 +16,14 @@ import Newsletter from "../shared/Newsletter";
 const Home = () => {
   return (
     <>
+      {/* Hero section start */}
       <section>
         <Container>
           <Row>
             <Col lg="6">
               <div className="hero__content">
                 <div className="hero__subtitle d-flex align-items-center">
-                  <Subtitle subtitle={"know Before You Go"} />
+                  <Subtitle subtitle={"Know Before You Go"} />
                   <img src={worldImg} alt="" />
                 </div>
                 <h1>
@@ -30,9 +31,9 @@ const Home = () => {
                   <span className="highlight">memories</span>{" "}
                 </h1>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
-                  exercitationem quidem est odit nostrum minus, illum tenetur
-                  laborum atque placeat!
+                  Explore new destinations, experience diverse cultures, and
+                  make unforgettable memories with our curated tours. Let us
+                  help you plan your next adventure with ease and excitement!
                 </p>
               </div>
             </Col>
@@ -43,8 +44,8 @@ const Home = () => {
               </div>
             </Col>
             <Col lg="2">
-              <div className="hero__img-box mt-4">
-                <video src={heroVideo} alt="" controls />
+              <div className="hero__img-box hero__video-box mt-4">
+                <video src={heroVideo} alt="" controls autoPlay muted />
               </div>
             </Col>
             <Col lg="2">
@@ -56,6 +57,8 @@ const Home = () => {
           </Row>
         </Container>
       </section>
+      {/* Hero section end  */}
+
       <section>
         <Container>
           <Row>
@@ -83,7 +86,6 @@ const Home = () => {
       {/* Featured tour section end */}
 
       {/* experience section start */}
-
       <section>
         <Container>
           <Row>
@@ -92,8 +94,9 @@ const Home = () => {
                 <Subtitle subtitle={"Experience"} />
                 <h2>With our all experience we will serve you </h2>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Blanditiis, ullam!
+                  Our team is committed to providing you with unforgettable
+                  travel experiences, offering expert knowledge and personalized
+                  service to make your journey seamless and enjoyable.
                 </p>
               </div>
               <div className="counter__wrapper d-flex align-items-center gap-5">

@@ -1,33 +1,63 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import "./booking.css";
 import { Form, FormGroup, ListGroup, ListGroupItem, Button } from "reactstrap";
-
+import { BASE_URL } from "../../utils/config";
 import { useNavigate } from "react-router-dom";
-
+import { AuthContext } from "../../context/AuthContext";
+import { toast } from "react-toastify";
 const Booking = ({ tour, avgRating }) => {
-  const { price, reviews } = tour;
+  const { price, reviews, title } = tour;
   const navigate = useNavigate();
-  const [credentials, setCredentials] = useState({
-    userId: "01", // later it will be dynamic
-    userEmail: "example@gmail.com",
-    fullName: "Huzeyfe Elselim",
+  const { user } = useContext(AuthContext);
+  const [booking, setBooking] = useState({
+    userId: user && user._id,
+    userEmail: user && user.email,
+    tourName: title,
+    fullName: "",
     phone: "12343434",
     guestSize: 1,
     bookAt: "",
   });
+  const [minDate, setMinDate] = useState("");
+  // Set the min date to today's date
+  useEffect(() => {
+    const today = new Date().toISOString().split("T")[0];
+    setMinDate(today);
+  }, []);
+
   const handlerChange = (e) => {
-    setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.value }));
+    setBooking((prev) => ({ ...prev, [e.target.id]: e.target.value }));
   };
 
   const serviceFee = 10;
   const totalAmount =
-    Number(price) * Number(credentials.guestSize) + Number(serviceFee);
+    Number(price) * Number(booking.guestSize) + Number(serviceFee);
 
   // send data to the server
-  const handleClick = (e) => {
+  const handleClick = async (e) => {
     e.preventDefault();
-
-    navigate("/thank-you");
+    console.log(booking);
+    try {
+      if (!user || user === undefined || user === null) {
+        return toast.error("Please sign in");
+      }
+      const res = await fetch(`${BASE_URL}/booking`, {
+        method: "post",
+        headers: {
+          "content-type": "application/json",
+        },
+        credentials: "include",
+        body: JSON.stringify(booking),
+      });
+      const result = await res.json();
+      if (!res.ok) {
+        return toast.error(result.message);
+      }
+      navigate("/thank-you");
+      toast.success(result.message);
+    } catch (err) {
+      toast.error(err.message);
+    }
   };
   return (
     <div className="booking">
@@ -71,6 +101,7 @@ const Booking = ({ tour, avgRating }) => {
               placeholder=""
               id="bookAt"
               required
+              min={minDate}
               onChange={handlerChange}
             />
             <input
@@ -78,6 +109,7 @@ const Booking = ({ tour, avgRating }) => {
               placeholder="Guest"
               id="guestSize"
               required
+              min={0}
               onChange={handlerChange}
             />
           </FormGroup>

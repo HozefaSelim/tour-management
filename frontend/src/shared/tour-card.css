@@ -64,17 +64,34 @@
   font-weight: 500;
 }
 
-
 .booking__btn {
-    background: var(--secondary-color) !important;
-    cursor: pointer;
-    padding: 0.2rem 0.5rem !important;
+  background: var(--secondary-color) !important;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem !important;
 }
 .booking__btn a {
-    text-decoration: none;
-    font-size: .9rem;
-    color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #fff;
 }
-.booking__btn a:hover{
-    color: #fff;
+.booking__btn a:hover {
+  color: #fff;
+}
+
+@media only screen and (max-width: 576px) {
+  .tour__title {
+    font-size: 1rem;
+  }
+
+  .booking__btn a {
+    font-size: 0.8rem;
+  }
+
+  .booking__btn {
+    padding: 0.2rem 0.5rem !important;
+  }
+
+  .tour__location , .tour__rating {
+    font-size: 0.8rem;
+  }
 }

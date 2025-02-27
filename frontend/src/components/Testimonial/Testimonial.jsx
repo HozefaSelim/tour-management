@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import ava01 from "../../assets/images/ava-1.jpg";
 import ava02 from "../../assets/images/ava-2.jpg";
 import ava03 from "../../assets/images/ava-3.jpg";
+import ava04 from "../../assets/images/ava-4.jpg";
 
 const Testimonial = () => {
   const settings = {
@@ -37,12 +38,12 @@ const Testimonial = () => {
     <Slider {...settings}>
       <div className="testimonial py-4 px-3">
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni
-          dolorem doloremque voluptates, facere neque inventore doloribus dolore
-          officiis ipsa modi!
+          "This travel service was a game-changer for our vacation! From
+          seamless bookings to unforgettable experiences, everything was
+          tailored perfectly. Highly recommended!"
         </p>
         <div className="d-flex align-items-center gap-4 mt-3">
-          <img src={ava01} className="w-25 h-25 rounded-2" alt="" />
+          <img src={ava01} className="w-25 h-25 rounded-2" alt="John Doe" />
           <div>
             <h5 className="mb-0 mt-3">John Doe</h5>
             <p>Customer</p>
@@ -51,12 +52,12 @@ const Testimonial = () => {
       </div>
       <div className="testimonial py-4 px-3">
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni
-          dolorem doloremque voluptates, facere neque inventore doloribus dolore
-          officiis ipsa modi!
+          "A flawless experience! The team was incredibly responsive and ensured
+          every detail of our trip was perfect. It made our holiday stress-free
+          and full of joy."
         </p>
         <div className="d-flex align-items-center gap-4 mt-3">
-          <img src={ava02} className="w-25 h-25 rounded-2" alt="" />
+          <img src={ava02} className="w-25 h-25 rounded-2" alt="Lia Franklin" />
           <div>
             <h5 className="mb-0 mt-3">Lia Franklin</h5>
             <p>Customer</p>
@@ -65,12 +66,12 @@ const Testimonial = () => {
       </div>
       <div className="testimonial py-4 px-3">
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni
-          dolorem doloremque voluptates, facere neque inventore doloribus dolore
-          officiis ipsa modi!
+          "I can't thank this service enough! Every aspect of my trip was
+          organized with precision and care, and it exceeded all my
+          expectations. I'll definitely book again!"
         </p>
         <div className="d-flex align-items-center gap-4 mt-3">
-          <img src={ava03} className="w-25 h-25 rounded-2" alt="" />
+          <img src={ava03} className="w-25 h-25 rounded-2" alt="John Doe" />
           <div>
             <h5 className="mb-0 mt-3">John Doe</h5>
             <p>Customer</p>
@@ -79,14 +80,14 @@ const Testimonial = () => {
       </div>
       <div className="testimonial py-4 px-3">
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni
-          dolorem doloremque voluptates, facere neque inventore doloribus dolore
-          officiis ipsa modi!
+          "Absolutely wonderful service! The booking was smooth, the tours were
+          well-organized, and I felt completely taken care of from start to
+          finish. Can't wait for my next adventure!"
         </p>
         <div className="d-flex align-items-center gap-4 mt-3">
-          <img src={ava02} className="w-25 h-25 rounded-2" alt="" />
+          <img src={ava04} className="w-25 h-25 rounded-2" alt="Lia Franklin" />
           <div>
-            <h5 className="mb-0 mt-3">Lia Franklin</h5>
+            <h5 className="mb-0 mt-3">Reem ahmed</h5>
             <p>Customer</p>
           </div>
         </div>

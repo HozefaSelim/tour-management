@@ -15,8 +15,9 @@ const Newsletter = () => {
                 <button className="btn newsletter__btn">Subscribe</button>
               </div>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Recusandae, ipsa.
+                Stay informed about the best travel destinations, tips, and
+                special offers directly in your inbox. Don't miss out on the
+                next adventure!
               </p>
             </div>
           </Col>

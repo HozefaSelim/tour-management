@@ -41,8 +41,9 @@ const Footer = () => {
             <div className="logo">
               <img src={logo} alt="" />
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Dignissimos, quasi!
+                Thank you for visiting our platform! We are dedicated to making
+                your travel experiences unforgettable. Stay connected for more
+                amazing offers, tips, and destination guides.
               </p>
             </div>
             <div className="social__links d-flex align-items-center gap-4">
@@ -81,7 +82,7 @@ const Footer = () => {
           <Col lg="3">
             <h5 className="footer__link-title">Quick Links</h5>
             <ListGroup className="footer__quick-links">
-              {quick_links.map((item, index) => (
+              {quick_links2.map((item, index) => (
                 <ListGroupItem key={index} className="ps-0 border-0">
                   <Link to={item.path}>{item.display}</Link>
                 </ListGroupItem>
@@ -121,7 +122,7 @@ const Footer = () => {
             </ListGroup>
           </Col>
 
-          <Col lg="12" className='text-center pt-5'>
+          <Col lg="12" className="text-center pt-5">
             <p className="copyright">
               Copyright {year} , designed and developed by Huzeyfe Elselim. All
               right reserved.
