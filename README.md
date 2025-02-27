@@ -94,7 +94,7 @@ This is a full-stack web application for booking tours. It includes both a **fro
 5. Run the backend server:
     ```bash
       npm run start-dev
-###Frontend
+### Frontend
 1. Navigate to the frontend directory:
    ```bash
       cd frontend  
@@ -105,7 +105,7 @@ This is a full-stack web application for booking tours. It includes both a **fro
     ```bash
       npm start
 
-###Contact
+### Contact
 For any inquiries or contributions, please contact us at: huzeyfeselim.dev.job@gmail.com
 
 
